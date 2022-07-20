@@ -91,12 +91,12 @@ img {
 
 .site-header-top-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .site-header-logo {
-  display: flex;
+  margin-right: auto;
+  transition: opacity 0.3s ease;
 }
 
 .site-header-logo:hover {
@@ -107,14 +107,17 @@ img {
   opacity: 0.6;
 }
 
+.site-header-logo-img {
+  display: block;
+  width: 35px;
+  height: 42px;
+  object-fit: contain ;
+}
+
 
 /* NAV */
 .sitenav{
-  padding-top: 6px;
-  padding-bottom: 6px;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 23px;
+  margin-right: 40px;
 }
 
 .sitenav-list {
@@ -129,35 +132,28 @@ img {
   margin-right: 30px;
 }
 
-.sitenav-item:nth-child(1) {
-  border-bottom: 3px solid #333333;
-}
-
-.sitenav-item:nth-child(4) {
-  margin-right: 0;
-}
-
-.sitenav-item:nth-child(5) {
-  margin-left: 40px;
-  border-bottom: 1px solid #333333;
-}
-
 .sitenav-link {
   display: block;
+  padding-top: 6px;
+  padding-bottom: 3px;
+  border-bottom: 3px solid transparent;
   text-decoration: none;
+  font-size: 15px;
   color: var(--text-color);
+  transition: border-bottom 0.3s ease;
 }
 
-.sitenav-link-grey {
-  color: #666666;
+.sitenav-link:hover {
+  border-bottom: 3px solid #333;
 }
 
-.sitenav-item:hover {
-  opacity: 0.8;
-}
 
-.sitenav-item:active {
-  opacity: 0.6;
+/* SEARCH-FORM */
+.search-form-input {
+  border: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #333;
 }
 
 
