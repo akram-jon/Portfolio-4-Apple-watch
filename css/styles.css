@@ -50,12 +50,14 @@ body {
 /* BUTTON */
 .button {
   display: inline-block;
+  min-width: 260px;
   padding: 12px 38px;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.5;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   background-color: var(--accent);
   color: var(--white);
   cursor: pointer;
@@ -110,7 +112,7 @@ img {
 .site-header-top {
   padding-top: 30px;
   padding-bottom: 30px;
-  --outline-color: #666666;
+  --outline-color: #666;
 }
 
 .site-header-top-container {
@@ -213,39 +215,6 @@ img {
   border-left: 3px solid #888888;
 }
 
-.intro-middle {
-  background-image: url("../img/watch-in-hand.jpg");
-  background-position: 730px center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-
-/* INTRO-FOOTER */
-.intro-footer {
-  background-image: url("../img/runners\ 1.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  --outline-color: var(--white);
-}
-
-.intro-footer-container {
-  padding-top: 240px;
-  padding-bottom: 240px;
-  padding-left: 520px;
-}
-
-.intro-footer-heading {
-  color: var(--white);
-}
-
-.intro-footer-text {
-  color: var(--white);
-  border-left: 3px solid var(--white);
-}
-
 
 /* FEATURES */
 .features {
@@ -294,6 +263,52 @@ img {
 }
 
 
+/* PROMO */
+.promo {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.promo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.promo-img {
+  display: inline-block;
+  width: 400px;
+  height: 600px;
+  object-fit: cover;
+}
+
+
+/* RUNNERS */
+.runners {
+  background-image: url("../img/runners\ 1.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-top: 240px;
+  padding-bottom: 240px;
+  --outline-color: var(--white);
+}
+
+.runners-intro-info {
+  margin-left: auto;
+}
+
+.runners-heading {
+  color: var(--white);
+}
+
+.runners-text {
+  color: var(--white);
+  border-left: 3px solid var(--white);
+}
+
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -305,11 +320,7 @@ only screen and (                min-resolution: 2dppx) {
     background-image: url("../img/intro-bg@2x.jpg");
   }
 
-  .intro-footer {
+  .runners {
     background-image: url("../img/runners\ 1@2x.jpg");
-  }
-
-  .intro-middle {
-    background-image: url("../img/watch-in-hand@2x.jpg");
-  }
+}
 }
