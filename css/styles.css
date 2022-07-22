@@ -1,8 +1,9 @@
 /* CUSTOM PROPERTY */
 :root {
-  --accent-color: #c9514c;
-  --white-color: #fff;
-  --outline-color: var(--accent-color);
+  --accent: #ea625c;
+  --white: #fff;
+  --accent-dark: #c9514c;
+  --outline-color: var(--accent);
   --text-color: #333333;
 }
 
@@ -33,7 +34,7 @@ body {
   font-family: "Roboto", "Arial", sans-serif;
   font-size: 15px;
   line-height: 24px;
-  background-color: var(--white-color);
+  background-color: var(--white);
   color: var(--text-color);
 }
 
@@ -51,31 +52,30 @@ img {
   height: auto;
 }
 
-.site-divider {
-  margin: 0;
-  border: 2px solid #dddddd;
+.main-content {
+  flex-grow: 1;
 }
 
 
 /* BUTTON */
 .button {
   display: inline-block;
-  width: 100%;
-  max-width: 260px;
-  padding: 12px;
+  padding: 12px 38px;
   font-size: 18px;
-  font-weight: 700;
-  line-height: 27px;
-  text-align: center;
+  font-weight: bold;
+  line-height: 1.5;
   text-transform: uppercase;
-  background-color: var(--accent-color);
-  color: var(--white-color);
+  text-decoration: none;
+  background-color: var(--accent);
+  color: var(--white);
   cursor: pointer;
   border: 0;
+  transition: background-color 0.3s ease,
+  opacity 0.3s ease;
 }
 
 .button:hover {
-  opacity: 0.8;
+  background-color: var(--accent-dark);
 }
 
 .button:active {
@@ -85,7 +85,7 @@ img {
 /* SITE-HEADER */
 .site-header-top {
   padding-top: 30px;
-  padding-bottom: 80px;
+  padding-bottom: 30px;
   --outline-color: #666666;
 }
 
@@ -144,7 +144,7 @@ img {
 }
 
 .sitenav-link:hover {
-  border-bottom: 3px solid #333;
+  border-bottom: 3px solid var(--text-color);
 }
 
 
@@ -153,54 +153,47 @@ img {
   border: 0;
   padding-top: 6px;
   padding-bottom: 6px;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--text-color);
 }
 
 
 /* INTRO */
-.intro-middle {
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-
-.intro-container {
-  display: flex;
-  align-items: center;
+.intro {
+  background-image: url("../img/intro-bg.jpg");
+  background-position: left calc(50% + 550px) bottom;
+  background-repeat: no-repeat;
+  padding-top: 140px;
+  padding-bottom: 185px;
+  border-bottom: 2px solid #ddd;
 }
 
 .intro-info {
-  width: 490px;
+  width: 100%;
+  max-width: 490px;
 }
 
 .intro-heading {
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 50px;
-  font-weight: 700;
-  line-height: 60px;
+  line-height: 1.2;
   color: #000;
 }
 
 .intro-text {
-  padding-left: 40px;
+  padding-left: 37px;
   margin-top: 0;
   margin-bottom: 30px;
   font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
   color: #777777;
   border-left: 3px solid #888888;
 }
 
-.intro-img {
-  display: block;
-  width: 587px;
-  height: 565px;
-  object-fit: contain;
-}
-
-.intro-middle-img {
-  margin-left: 110px;
+.intro-middle {
+  background-image: url("../img/watch-in-hand.jpg");
+  background-position: 730px center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 
@@ -211,7 +204,7 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  --outline-color: var(--white-color);
+  --outline-color: var(--white);
 }
 
 .intro-footer-container {
@@ -221,12 +214,12 @@ img {
 }
 
 .intro-footer-heading {
-  color: var(--white-color);
+  color: var(--white);
 }
 
 .intro-footer-text {
-  color: var(--white-color);
-  border-left: 3px solid var(--white-color);
+  color: var(--white);
+  border-left: 3px solid var(--white);
 }
 
 
@@ -279,7 +272,7 @@ img {
   font-size: 16px;
   line-height: 26px;
   text-transform: uppercase;
-  color: #ea625c;
+  color: var(--accent);
 }
 
 .features-footer-line-img {
@@ -295,7 +288,15 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
+  .intro {
+    background-image: url("../img/intro-bg@2x.jpg");
+  }
+
   .intro-footer {
     background-image: url("../img/runners\ 1@2x.jpg");
+  }
+
+  .intro-middle {
+    background-image: url("../img/watch-in-hand@2x.jpg");
   }
 }
